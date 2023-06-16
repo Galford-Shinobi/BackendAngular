@@ -1,4 +1,10 @@
-﻿using BackEnd.Shared.Persistence.Context;
+﻿using BackEnd.Persistence.Repositories;
+using BackEnd.Sahred.Domain.IRepositories;
+using BackEnd.Shared.Domain.IRepositories;
+using BackEnd.Shared.Domain.IServices;
+using BackEnd.Shared.Persistence.Context;
+using BackEnd.Shared.Persistence.Repositories;
+using BackEnd.Shared.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,23 +21,15 @@ namespace Backend.Shared.IOC
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
-            //string mySqlConnectionStr = configuration.GetConnectionString("DefaultConnection");
-            //services.AddDbContextPool<AplicationDbContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+            // Service
+            services.AddScoped<IUsuarioService, UsuarioService>();
+            services.AddScoped<ILoginService, LoginService>();
+            services.AddScoped<ICuestionarioService, CuestionarioService>();
 
-            //services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            //services.AddScoped<IVentaRepository, VentaRepository>();
-
-            //services.AddAutoMapper(typeof(AutoMapperProfile));
-
-
-            //services.AddScoped<IRolService, RolService>();
-            //services.AddScoped<IUsuarioService, UsuarioService>();
-            //services.AddScoped<ICategoriaService, CategoriaService>();
-            //services.AddScoped<IProductoService, ProductoService>();
-            //services.AddScoped<IVentaService, VentaService>();
-            //services.AddScoped<IDashBoardService, DashBoardService>();
-            //services.AddScoped<IMenuService, MenuService>();
-
+            // Repository
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<ILoginRepository, LoginRepository>();
+            services.AddScoped<ICuestionarioRepository, CuestionarioRepository>();
         }
 
     }

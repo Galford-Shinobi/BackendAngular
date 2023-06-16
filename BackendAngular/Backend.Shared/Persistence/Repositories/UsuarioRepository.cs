@@ -17,7 +17,7 @@ namespace BackEnd.Shared.Persistence.Repositories
 
         public async Task SaveUser(Usuario usuario)
         {
-            _context.Add(usuario);
+            _context.Usuario.Add(usuario);
             await _context.SaveChangesAsync();
         }
 
