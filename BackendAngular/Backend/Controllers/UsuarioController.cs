@@ -1,4 +1,6 @@
-﻿using BackEnd.Shared.Domain.IServices;
+﻿using Backend.Shared.DTO;
+using Backend.Shared.UploadData;
+using BackEnd.Shared.Domain.IServices;
 using BackEnd.Shared.Domain.Models;
 using BackEnd.Shared.DTO;
 using BackEnd.Shared.Utils;
@@ -6,6 +8,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -20,6 +25,33 @@ namespace Backend.Controllers
         public UsuarioController(IUsuarioService usuarioService)
         {
            _usuarioService = usuarioService;
+        }
+
+        [HttpGet("ReadJson")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public IActionResult GetReadJson([FromQuery] FiltroDTO filtro) 
+        {
+            try
+            {
+                List<MarcadoZCUDTO> List = MarketDbContextData.CargarDataAsync();
+
+                string Searching = filtro.filtrado;
+                CultureInfo culture = new CultureInfo("es-MX");
+                DateTime tempDate = Convert.ToDateTime(filtro.FechaInicial, culture);
+                DateTime StartDate = Convert.ToDateTime(filtro.FechaInicial, culture); ;
+                DateTime EndDate = Convert.ToDateTime(filtro.FechaFinal, culture); ;
+
+                List<MarcadoZCUDTO> Query = List
+                    .Where(obj => obj.cuv == Searching || obj.NoOficio == Searching 
+                    || Convert.ToDateTime(obj.FechaOfic) >= StartDate && Convert.ToDateTime(obj.FechaOfic) < EndDate).ToList();
+
+
+                return Ok(new { message = "Usuario registrado con exito!" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]

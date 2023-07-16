@@ -1,0 +1,92 @@
+[
+  {
+    "cuv": "9123456789987125",
+    "DocumentoOf": "Document uno",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "12/02/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "21/06/20023"
+  },
+  {
+    "cuv": "0123456789987456",
+    "DocumentoOf": "Document dos",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "12/02/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "21/06/20023"
+  },
+  {
+    "cuv": "6549874563210357",
+    "DocumentoOf": "Document tres",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "12/02/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "21/06/20023"
+  },
+  {
+    "cuv": "1597536547893210",
+    "DocumentoOf": "Document cuatro",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "12/02/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "21/06/20023"
+  },
+  {
+    "cuv": "0269874123578521",
+    "DocumentoOf": "Document cinco",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "24/10/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "10/05/20023"
+  },
+  {
+    "cuv": "9632587410159423",
+    "DocumentoOf": "Document seis",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "30/03/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "15/05/20023"
+  },
+  {
+    "cuv": "0357412863794015",
+    "DocumentoOf": "Document siete",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "12/11/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "19/04/20023"
+  },
+  {
+    "cuv": "2200569874315687",
+    "DocumentoOf": "Document ocho",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "01/12/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "06/06/20023"
+  },
+  {
+    "cuv": "1212369852475544",
+    "DocumentoOf": "Document nueve",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "12/02/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "21/05/20023"
+  },
+  {
+    "cuv": "2233015497889966",
+    "DocumentoOf": "Document diez",
+    "NoOficio": "ASD/1245/ERER",
+    "FechaOfic": "30/01/2022",
+    "Fraccionamiento": "Un fraccionamiento es un conjunto de manzanas y lotes trazado y planeado",
+    "TipoExcepccion": "Excepccion",
+    "FechaRergistro": "15/05/20023"
+  }
+]

@@ -1,4 +1,5 @@
-﻿using BackEnd.Shared.Domain.IServices;
+﻿using Backend.Shared.DTO;
+using BackEnd.Shared.Domain.IServices;
 using BackEnd.Shared.Domain.Models;
 using BackEnd.Shared.Utils;
 using Microsoft.AspNetCore.Mvc;
@@ -31,8 +32,8 @@ namespace Backend.Controllers
                 {
                     return BadRequest(new { message = "Usuario o contraseña invalidos" });
                 }
-                string tokenString = JwtConfigurator.GetToken(user, _config);
-                return Ok(new { token = tokenString });
+                TokenDTO tokenString = JwtConfigurator.GetToken(user, _config);
+                return Ok(new { token = tokenString.Token });
             }
             catch (Exception ex)
             {
